@@ -1,0 +1,23 @@
+.enjoy-css {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  font: normal 28px/normal Arial, Helvetica, sans-serif;
+  color: rgba(255,255,255,0.9);
+  text-indent: -1px;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  letter-spacing: 1px;
+  word-spacing: 47px;
+  background: #0199d9;
+  -webkit-transition: text-shadow 300ms cubic-bezier(0.99, 0.015, 0.02, 1.005);
+  -moz-transition: text-shadow 300ms cubic-bezier(0.99, 0.015, 0.02, 1.005);
+  -o-transition: text-shadow 300ms cubic-bezier(0.99, 0.015, 0.02, 1.005);
+  transition: text-shadow 300ms cubic-bezier(0.99, 0.015, 0.02, 1.005);
+  -webkit-transform: rotateX(10.4377467708deg) rotateY(5.729577951308232deg)   ;
+  transform: rotateX(10.4377467708deg) rotateY(5.729577951308232deg)   ;
+}

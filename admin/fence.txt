@@ -1,0 +1,34 @@
+<?php
+session_start();
+error_reporting(1);
+if (!isset($_SESSION['alogin']))
+{
+	echo "<br><h2>You are not Logged On Please Login to Access this Page</h2>";
+	echo "<a href=index.php><h3 align=center>Click Here for Login</h3></a>";
+	exit();
+}
+?>
+<?php
+include("database.php");
+include("header.php");
+
+if(isset($_GET["subid"]))
+{
+	$id=$_GET["subid"];	
+	if(mysql_query("Delete from mst_test where test_id ='$id'"))
+	 {
+		 echo "test deleted";
+	 }
+}
+
+echo "<br><h2>Delete Test</h2>";
+echo "<br><h2>Please Click on the Test you want to Delete</h2>";
+$qr = mysql_query("select * from mst_test")or die(mysql_error());
+
+while($row=mysql_fetch_row($qr))
+{
+	echo "<table align=center border=1 width=500 height=80>";
+	echo "<tr><td align=center ><a href=deltest.php?subid=$row[0]>$row[2]</a>";
+	echo "</td></tr></table>";
+}
+?>
